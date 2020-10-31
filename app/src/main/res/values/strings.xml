@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FingerPainter_hfyst1</string>
+    <string name="cd_importImageButton"><![CDATA[<Import Image>]]></string>
+    <string name="cd_brush"><![CDATA[<Brush Size>]]></string>
+    <string name="cd_paint"><![CDATA[<Choose Colour>]]></string>
+    <string name="header_brushSize">Brush Size</string>
+    <string name="header_brushShape">Brush Shape</string>
+    <string name="header_currentColour">"Current : "</string>
+    <string name="button_done">Done</string>
+    <string name="hint_brushSize">(width in pixels, eg:10)</string>
+</resources>

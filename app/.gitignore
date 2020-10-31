@@ -1,0 +1,8 @@
+/build
+.name
+*.gradle
+*.jar
+gradlew
+*.bat
+/.idea
+/.gradle
