@@ -12,9 +12,16 @@ import java.util.ArrayList;
 
 public class ColourActivity extends AppCompatActivity {
 
+    /**
+     * Default colour
+     */
     private String colourPicked = "#00000000";
+
+    /**
+     * Array of colours available
+     */
     private final String[] colourCodes = {"#00000000","#ff000000","#ffaaaaaa","#ffffffff","#ffff4444",
-                                    "#ffff8888","#ffffbb33","#ff0099cc","#ff00ddff","#ff99cc00"};
+                                    "#ffff8800","#ffffbb33","#ff0099cc","#ff00ddff","#ff99cc00"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +64,17 @@ public class ColourActivity extends AppCompatActivity {
         setCurrentColour(9);
     }
 
-    public void returnMainActivity(View v){
+    /**
+     * onClick method to indicate selection complete
+     * @param v button
+     */
+    public void onClickDone(View v){
         finish();
     }
 
+    /**
+     * send data back to the activity that called it
+     */
     @Override
     public void finish(){
         Intent data = new Intent();
@@ -69,6 +83,10 @@ public class ColourActivity extends AppCompatActivity {
         super.finish();
     }
 
+    /**
+     * Updates UI to indicate the current brush colour, and the colour that is currently being picked
+     * @param i index of colourCode array
+     */
     public void setCurrentColour(int i){
         Button b = findViewById(R.id.currentColour);
         if(i < colourCodes.length){
@@ -77,6 +95,11 @@ public class ColourActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method overloading
+     * Updates UI to indicate the current brush colour, and the colour that is currently being picked
+     * @param s the colour code (eg. #FFFFFFFF)
+     */
     public void setCurrentColour(String s){
         Button b = findViewById(R.id.currentColour);
         b.setBackgroundColor(Color.parseColor(s));
